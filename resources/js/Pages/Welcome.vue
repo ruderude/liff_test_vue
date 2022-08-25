@@ -1,12 +1,21 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
+import liff from '@line/liff';
 
 defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
+    liff_id: Boolean,
 })
+
+liff.init({
+    liffId: "1657417799-Zexpg1x3",
+})
+    .then(() => {
+        const access_token = liff.getAccessToken();
+        alert(access_token);
+    })
+    .catch((error) => {
+        alert(JSON.stringify(error));
+    })
 </script>
 
 <template>
@@ -290,3 +299,4 @@ defineProps({
 
 
 </template>
+
