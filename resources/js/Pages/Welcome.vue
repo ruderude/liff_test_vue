@@ -18,6 +18,19 @@ import { Head, Link } from '@inertiajs/inertia-vue3';
     </div>
 
     <div class="container mt-16">
+        <div>
+            <Link :href="route('login')" class="text-sm text-gray-700 dark:text-gray-500 underline">
+                <div class="btn btn-primary mr-3">ログイン</div>
+            </Link>
+            
+            <Link :href="route('register')" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">
+                <div class="btn btn-info">新規登録</div>
+            </Link>
+            
+        </div>
+
+        <br>
+
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
