@@ -1,34 +1,20 @@
 <script setup>
 import { Head, Link } from '@inertiajs/inertia-vue3';
-import liff from '@line/liff';
-
-defineProps({
-    liff_id: Boolean,
-})
-
-liff.init({
-    liffId: "1657417799-Zexpg1x3",
-})
-    .then(() => {
-        const access_token = liff.getAccessToken();
-        alert(access_token);
-    })
-    .catch((error) => {
-        alert(JSON.stringify(error));
-    })
 </script>
 
 <template>
     <Head title="Welcome" />
 
-    <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-        <Link v-if="$page.props.auth.user" :href="route('dashboard')" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</Link>
-
-        <template v-else>
+    <div class="fixed top-0 left-0 px-6 py-4 sm:block">
+        <Link :href="route('dashboard')" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</Link>
+    </div>
+    
+    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+        <div>
             <Link :href="route('login')" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</Link>
 
-            <Link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</Link>
-        </template>
+            <Link :href="route('register')" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</Link>
+        </div>
     </div>
 
     <div class="container mt-16">
@@ -152,7 +138,7 @@ liff.init({
     <div class="container">
         <div class="row" >
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://dot.asahi.com/S2000/upload/2017011800026_1.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -162,7 +148,7 @@ liff.init({
                 </div>
             </div>
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="http://bible-cafe.com/wp-content/uploads/2015/04/Nitobe_Inazo.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -172,7 +158,7 @@ liff.init({
                 </div>
             </div>
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://static.tokyo-np.co.jp/image/article/size1/f/c/e/0/fce073de2d07047512a38f19d4a53c16_3.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -187,7 +173,7 @@ liff.init({
 
         <div class="row" >
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://dot.asahi.com/S2000/upload/2017011800026_1.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -197,7 +183,7 @@ liff.init({
                 </div>
             </div>
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="http://bible-cafe.com/wp-content/uploads/2015/04/Nitobe_Inazo.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -207,7 +193,7 @@ liff.init({
                 </div>
             </div>
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://static.tokyo-np.co.jp/image/article/size1/f/c/e/0/fce073de2d07047512a38f19d4a53c16_3.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -222,7 +208,7 @@ liff.init({
 
         <div class="row" >
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://dot.asahi.com/S2000/upload/2017011800026_1.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -232,7 +218,7 @@ liff.init({
                 </div>
             </div>
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="http://bible-cafe.com/wp-content/uploads/2015/04/Nitobe_Inazo.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
@@ -242,7 +228,7 @@ liff.init({
                 </div>
             </div>
             <div class="col text-center">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="https://static.tokyo-np.co.jp/image/article/size1/f/c/e/0/fce073de2d07047512a38f19d4a53c16_3.jpg" class="card-img-top" style="max-height: 400px" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
